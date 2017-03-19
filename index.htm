@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rozvrh</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      var START_POS = 68; // vzdalenost prvni zobrazovane hodiny od leveho okraje obrazku v px
+      var START_HOUR = 14; // prvni zobrazovana hodina
+      var END_POS = 1090; // vzdalenost posledni zobrazovane hodiny od leveho okraje obrazku v px
+      var END_HOUR = 20; // posledni zobrazovana hodina
+      var RULER_TOP = 90; // vzdalenost zlute cary od horniho okraje obrazku
+      var RULER_HEIGHT = 350; // vyska zlute cary
+
+      var IMAGES = [
+	'rozvrh.png',  // nedele
+	'rozvrh.png', // pondeli
+	'rozvrh2.png', // utery
+	'rozvrh.png', // streda
+	'rozvrh.png', // ctvrtek
+	'rozvrh.png',  // patek
+	'rozvrh.png'  // sobota
+      ];
+    </script>
+    <script src="init.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body onload="init()">
+
+    <div id="container">
+      <img src="rozvrh.png" id="image"/>
+      <div id="ruler-wrapper">
+	<div id="ruler-top"></div>
+	<div id="ruler"></div>
+	<div id="ruler-bottom"></div>
+      </div>
+      <div id="date">Datum</div>
+      <div id="clock">Čas</div>
+    </div>
+    
+  </body>
+</html>

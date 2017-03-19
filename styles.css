@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #003366;
+}
+img {
+    border: 0;
+}
+#container {
+    position: relative;
+    margin: auto;
+    width: 1100px;
+}
+#ruler-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 0px solid red;
+}
+#ruler {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px solid yellow;
+}
+#ruler-top {
+    width: 25px;
+    height: 8px;
+    background: url("arrow-top.png") no-repeat top left;
+    border: 0px solid red;
+    position:relative;
+    left: -12px;
+}
+#ruler-bottom {
+    width: 25px;
+    height: 7px;
+    background: url("arrow-bottom.png") no-repeat top left;
+    border: 0px solid red;
+    position: absolute;
+    left: -12px;
+    bottom: 0px;
+}
+#clock {
+    color: white;
+    position: absolute;
+    top: 475px;
+    left: 950px;
+    font-size: 22pt;
+    font-family: arial;
+    font-weight: bold;
+    background: #003366;
+}
+#date {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 2px;
+    border: 0px solid red;
+    font-size: 24pt;
+    font-family: arial;
+    font-weight: bold;
+    background: #003366;
+}
