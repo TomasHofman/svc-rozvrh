@@ -22,6 +22,24 @@
       ];
     </script>
     <script src="init.js"></script>
+    <script type="text/javascript" src="snowstorm.js"></script>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      function posliSantu() {
+        var posun = 2600; // o kolik px se posune
+        var cas = 15000; // cas v ms, do ktereho se pohyb rozlozi
+        var opakovat = 20000; // cas v ms, po kterem se pohyb opakuje
+        var left = 2000; // pocatecni pozice
+        var top = 400; // vzdalenost od horniho okraje obrazovky
+
+        $("#santa").css('left', left + 'px');
+        $("#santa").css('top', top + 'px');
+        $("#santa").animate({left: "-=" + posun}, cas);
+
+        window.setTimeout(posliSantu, cas);
+      };
+      window.setTimeout(posliSantu, 1000);
+    </script>
     <meta charset="utf-8" />
   </head>
   <body onload="init()">
@@ -36,6 +54,7 @@
       <div id="date">Datum</div>
       <div id="clock">Čas</div>
     </div>
-    
+
+    <img src="santa.jpg" id="santa" style="position: absolute;"/>
   </body>
 </html>
